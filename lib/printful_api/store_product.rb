@@ -6,7 +6,7 @@ module PrintfulAPI
 
 		#api_attributes :id, :type, :brand, :model, :image, :variant_count, :dimensions
     
-    api_attributes :id, :external_id, :name, :variants, :synced, :sync_variants
+                api_attributes :id, :external_id, :name, :thumbnail_url, :variants, :synced, :sync_variants
     
     
 		# has_many :allowed_files, class: 'PrintfulAPI::FileType'
