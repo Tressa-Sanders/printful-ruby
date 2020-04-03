@@ -8,8 +8,7 @@ module PrintfulAPI
     
 		has_many :files, class: 'PrintfulAPI::FileType'
 		has_many :options, class: 'PrintfulAPI::OptionType'
-    
-    has_many :sync_variants, class: 'PrintfulAPI::SyncVariant'
+                has_many :sync_variants, class: 'PrintfulAPI::SyncVariant'
     
 		def sync_variants
 			@sync_variants ||= PrintfulAPI::SyncVariant.list( sync_product_id: self.id )
