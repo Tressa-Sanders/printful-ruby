@@ -9,8 +9,17 @@ module PrintfulAPI
 		belongs_to :store_product
 
 		def self.resource_path
-		'/store/products/variants'
+		 '/store/variants'
 		end
+		
+		def load_data( data )
+		 if data['variant'].present?
+		   super(data['variant'])
+		 else
+		   super( data )
+		 end
+		end
+		
 	end
 
 end
