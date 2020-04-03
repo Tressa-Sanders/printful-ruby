@@ -3,7 +3,7 @@ module PrintfulAPI
 	class SyncVariant < APIResource
 		include PrintfulAPI::APIOperations::Get
 
-                api_attributes :id, :external_id, :sync_product_id, :name, :synced, :variant_id, :retail_price, :currency
+                api_attributes :id, :external_id, :sync_product_id, :name, :synced, :variant_id, :retail_price, :currency, :product, :files, :options
     
 		belongs_to :store_product, class: 'PrintfulAPI::StoreProduct', :inverse_of => :sync_variants
 
