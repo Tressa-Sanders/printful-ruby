@@ -9,7 +9,6 @@ module PrintfulAPI
 		has_many :files, class: 'PrintfulAPI::FileType'
 		has_many :options, class: 'PrintfulAPI::OptionType'
                 has_many :sync_variants, class: 'PrintfulAPI::SyncVariant', :inverse_of => :store_product
-		accepts_nested_attributes_for :sync_variants, class: 'PrintfulAPI::SyncVariant'
 
 		def self.resource_path
 		  '/store/products'
