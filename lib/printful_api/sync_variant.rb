@@ -8,7 +8,7 @@ module PrintfulAPI
 		belongs_to :store_product
 
 		def self.resource_path
-		 '/store/products/:id'
+		 '/store/products/'
 		end
 		
 		def load_data( data )
