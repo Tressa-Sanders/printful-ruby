@@ -4,7 +4,7 @@ module PrintfulAPI
 		include PrintfulAPI::APIOperations::List
 		include PrintfulAPI::APIOperations::Get
     
-                api_attributes :id, :external_id, :name, :variants, :synced, :thumbnail_url
+                api_attributes :id, :external_id, :name, :variants, :synced, :thumbnail_url, sync_variant_attributes: [ :id, :external_id, :sync_product_id, :name, :synced, :variant_id, :retail_price, :currency ]
     
 		has_many :files, class: 'PrintfulAPI::FileType'
 		has_many :options, class: 'PrintfulAPI::OptionType'
