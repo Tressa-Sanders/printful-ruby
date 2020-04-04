@@ -7,9 +7,9 @@ module PrintfulAPI
     
 		belongs_to :store_product, class: 'PrintfulAPI::StoreProduct', :inverse_of => :sync_variants
 
-		#def self.resource_path
-		# '/store/products/'
-		#end
+		def self.resource_path
+		 '/store/products/variant'
+		end
 		
 		#def load_data( data )
 		# if data['product'].present?
